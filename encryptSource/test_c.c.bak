@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+main(){
+char password[256];
+char encryptpass[256];
+printf("¿¿¿¿¿¿¿¿¿¿¿¿");
+scanf("%d",password);
+printf("¿¿¿¿¿¿¿¿¿¿¿¿256¿¿¿¿¿¿\n¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿");
+scanf("%d",encryptpass);
+char str1[] = "echo ";
+char str2[] = "|openssl enc -aes256 -pass pass:\"";
+char str3[] = "\" -in password.record -out encrypt.record";
+char encrypt[612];
+strcpy(encrypt,strcat(strcat(strcat(strcat(str1, password),str2),encryptpass),str3));
+//system(encrypt);
+printf(encrypt);
+};
